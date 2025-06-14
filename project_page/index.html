@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="GAF: Gaussian Action Field as a Dynamic World Model for Robotic Manipulation">
+  <meta name="keywords"
+    content="GAF: Gaussian Action Field as a Dynamic World Model for Robotic Manipulation, SMPL">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GAF: Gaussian Action Field as a Dynamic World Model for Robotic Manipulation
+  </title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">GAF: Gaussian Action Field as a Dynamic World Model for Robotic Manipulation</h1>
+            <div class="is-size-3 publication-authors">
+              <span class="author-block"></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                Ying Chai</a><sup>1</sup>,</span>
+              <span class="author-block">
+                Litao Deng</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="https://dsaurus.github.io/saurus/">Ruizhi Shao</a><sup>1</sup>,</span>
+              <span class="author-block">
+                Jiajun Zhang</a><sup>3</sup>,</span>
+              <span class="author-block">
+                Liangjun Xing</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://zhanghongwen.cn/">Hongwen Zhang</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.liuyebin.com/">Yebin Liu</a><sup>1</sup></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Department of Automation, Tsinghua University</span>
+              <span class="author-block"><sup>2</sup>School of Artificial Intelligence, Beijing Normal University</span>
+              <span class="author-block"><sup>3</sup>School of Electronic Engineering, Beijing University of Posts and Telecommunications</span>
+            </div>
+
+            <!-- <div class="is-size-3 publication-authors">
+                 <span class="author-block">Check out our new project page <a href="https://www.liuyebin.com/pymaf-x" target="_blank"><i>here</i></a>
+                 </span>
+            </div> -->
+            <div class="column has-text-centered">
+              <div class="publication-links">
+
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://raw.githubusercontent.com/ChaiYing1/GAF/refs/heads/main/paper.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code: Coming Soon</span>
+                  </a>
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="hero teaser">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-8">
+          <!-- <video id="teaser" autoplay muted loop height="100%">
+          <source src="https://teaser.mp4"
+                  type="video/mp4">
+        </video> -->
+          <img width=90% src="https://raw.githubusercontent.com/ChaiYing1/GAF/refs/heads/main/start.png" class="center">
+          <h2 class="subtitle has-text-centered">
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+              <h2 class="title is-2">Abstract</h2>
+              <div class="content has-text-justified">
+                  <p>
+                      Accurate action inference is critical for vision-based robotic manipulation. Existing approaches typically follow either a Vision-to-Action (<em><strong>V-A</strong></em>) paradigm, predicting actions directly from visual inputs, or a Vision-to-3D-to-Action (<em><strong>V-3D-A</strong></em>) paradigm, leveraging intermediate 3D representations. However, these methods often struggle with action inaccuracies due to the complexity and dynamic nature of manipulation scenes. In this paper, we propose a <em><strong>V-4D-A</strong></em> framework that enables direct action reasoning from motion-aware 4D representations via a Gaussian Action Field (GAF). GAF extends 3D Gaussian Splatting (3DGS) by incorporating learnable motion attributes, allowing simultaneous modeling of dynamic scenes and manipulation actions. To learn time-varying scene geometry and action-aware robot motion, GAF supports three key query types: reconstruction of the current scene, prediction of future frames, and estimation of initial action via robot motion. Furthermore, the high-quality current and future frames generated by GAF facilitate manipulation action refinement through a GAF-guided diffusion model. Extensive experiments demonstrate significant improvements, with GAF achieving +11.5385 dB PSNR and -0.5574 LPIPS improvements in reconstruction quality, while boosting the average success rate in robotic manipulation tasks by 10.33% over state-of-the-art methods.
+                  </p>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+    <p></p>
+    <br>
+    <section class="hero teaser">
+      <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-8">
+            <!-- <video id="teaser" autoplay muted loop height="100%">
+          <source src="https://teaser.mp4"
+                  type="video/mp4">
+        </video> -->
+            <img width=90% src="https://raw.githubusercontent.com/ChaiYing1/GAF/refs/heads/main/intro.png" class="center">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds">
+            <h3 align="center" style="margin-top:40px;" class="title is-4">
+                Demo Overview
+            </h3>
+            <div class="content has-text-centered">
+                <p>Part I: GAF Manipulation Process Display</p>
+                <p>Part II: Robustness Test Under Disturbance</p>
+                <p>Part III: Comparison with SOTA</p>
+                <video id="replay-video" controls muted width="90%">
+                    <source src="files/demo.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+    <!--/ Paper video. -->
+  </section>
+
+<!--  <section class="section" id="BibTeX">-->
+<!--    <div class="container is-max-desktop content">-->
+<!--      <h2 class="title">BibTeX</h2>-->
+<!--      <pre><code>@article{yao2025p,-->
+<!--        title={PhysiInter: Integrating Physical Mapping for High-Fidelity Human Interaction Generation},-->
+<!--        author={Yao, Wei and Sun, Yunlian and Liu, Chang and Zhang, Hongwen and Tang, Jinhui},-->
+<!--        journal={arXiv preprint arXiv:2506.07456},-->
+<!--        year={2025}-->
+<!--      }-->
+<!--  </code></pre>-->
+<!--    </div>-->
+
+  </section>
+
+
+  <footer class="footer">
+    <!--   <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://arxiv.org/pdf/2103.16507.pdf" target="_blank">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/HongwenZhang/PyMAF" class="external-link" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+    <div align="center" class="container">
+      <div class="columns is-centered">
+        <div class="content">
+          The website template is borrowed from <a href="https://nerfies.github.io" target="_blank">nerfies</a>. Thanks
+          to the original authors.
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
