@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="UltraHiT: A Hierarchical Transformer Architecture for Generalizable Internal Carotid Artery Robotic Ultrasonography (ICRA 2026)">
-  <meta name="keywords" content="ICRA 2026, robotic ultrasonography, internal carotid artery, UltraHiT, transformer">
+        content="GAF: Gaussian Action Field as a 4D Representation for Dynamic World Modeling in Robotic Manipulation (ICRA 2026)">
+  <meta name="keywords" content="ICRA 2026, world model, manipulation, Gaussian, GAF, 4D">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UltraHiT (ICRA 2026)</title>
+  <title>GAF (ICRA 2026)</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -33,40 +33,39 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-3 publication-title" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-            UltraHiT: A Hierarchical Transformer Architecture for Generalizable Internal Carotid Artery Robotic Ultrasonography
+            GAF: Gaussian Action Field as a 4D Representation for Dynamic World Modeling in Robotic Manipulation
           </h1>
           <div class="is-size-4"><b style="color: #e74c3c;">Accepted to ICRA 2026</b></div>
 
           <div class="is-size-5 publication-authors" style="font-weight: bold;">
-            <span class="author-block"><a href="https://scholar.google.com/citations?user=yHtp8lUAAAAJ&hl=en&oi=sra" target="_blank" style="color: inherit; text-decoration: none;">Teng Wang</a><sup>1,*</sup>,</span>
-            <span class="author-block"><a href="https://scholar.google.com/citations?user=ULmStp8AAAAJ&hl=en&oi=sra" target="_blank" style="color: inherit; text-decoration: none;">Haojun Jiang</a><sup>1,*,&sect;</sup>,</span>
-            <span class="author-block"><a href="https://scholar.google.com/citations?user=UQgYoZ4AAAAJ&hl=en&oi=sra" target="_blank" style="color: inherit; text-decoration: none;">Yuxuan Wang</a><sup>2,*</sup>,</span>
-            <span class="author-block">Zhenguo Sun<sup>3</sup>,</span>
-            <span class="author-block"><a href="https://scholar.google.com/citations?user=MDq0cTIAAAAJ&hl=en&oi=sra" target="_blank" style="color: inherit; text-decoration: none;">Xiangjie Yan</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="https://scholar.google.com/citations?user=6EIX-JQAAAAJ&hl=en&oi=sra" target="_blank" style="color: inherit; text-decoration: none;">Xiang Li</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="https://scholar.google.com.hk/citations?user=-P9LwcgAAAAJ&hl=en" target="_blank" style="color: inherit; text-decoration: none;">Gao Huang</a><sup>1,&dagger;</sup></span>
+            <span class="author-block">Ying Chai*</a><sup>1</sup>,</span>
+            <span class="author-block">Litao Deng</a><sup>2,3</sup>,</span>
+            <span class="author-block"><a href="https://dsaurus.github.io/saurus/">Ruizhi Shao</a><sup>1</sup>,</span>
+            <span class="author-block">Jiajun Zhang<sup>1</sup>,</span>
+            <span class="author-block">Kangchen Lv<sup>1</sup>,</span>
+            <span class="author-block">Liangjun Xing<sup>1</sup>,</span>
+            <span class="author-block"><a href="https://sites.google.com/view/homepageoflixiang">Xiang Li</a><sup>1,&dagger;</sup></span>
+            <span class="author-block"><a href="https://zhanghongwen.cn/">Hongwen Zhang</a><sup>2,&dagger;</sup></span>
+            <span class="author-block"><a href="https://www.liuyebin.com/">Yebin Liu</a><sup>1,&dagger;</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Department of Automation, BNRist, Tsinghua University, Beijing, China.</span>
-            <span class="author-block"><sup>2</sup>School of Computer Science and Technology, Xidian University, Xian, China.</span>
-            <span class="author-block"><sup>3</sup>Beijing Academy of Artificial Intelligence, Beijing, China.</span>
+            <span class="author-block"><sup>1</sup>Tsinghua University</span>
+            <span class="author-block"><sup>2</sup>Beijing Normal University</span>
+            <span class="author-block"><sup>3</sup>Shadow AI.</span>
           </div>
 
           <div class="is-size-6 publication-authors" style="font-weight: bold;">
-            <sup>*</sup>These authors contributed equally to this work.
+            <sup>*</sup>Equal contributions.
           </div>
           <div class="is-size-6 publication-authors">
-            <sup>&sect;</sup>Haojun Jiang guided this work.
-          </div>
-          <div class="is-size-6 publication-authors">
-            <sup>&dagger;</sup>Corresponding author: Gao Huang. Email: gaohuang@tsinghua.edu.cn
+            <sup>&dagger;</sup>Corresponding author.
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2509.13832"
+                <a href="https://arxiv.org/pdf/2506.14135"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -95,7 +94,7 @@
   <div class="container is-max-desktop content has-text-centered">
     <h2 class="title is-3">Demo</h2>
     <video controls style="width: 100%; height: auto;">
-      <source src="video/demo_icra26_final.mp4" type="video/mp4">
+      <source src="video/demo.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
@@ -108,16 +107,17 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Carotid ultrasound is crucial for the assessment of cerebrovascular health, particularly the internal carotid artery (ICA).
-            While previous research has explored automating carotid ultrasound, none has tackled the challenging ICA.
-            This is primarily due to its deep location, tortuous course, and significant individual variations, which greatly increase scanning complexity.
-            To address this, we propose a Hierarchical Transformer-based decision architecture, namely UltraHiT, that integrates high-level variation assessment with low-level action decision.
-            Our motivation stems from conceptualizing individual vascular structures as morphological variations derived from a standard vascular model.
-            The high-level module identifies variation and switches between two low-level modules: an adaptive corrector for variations, or a standard executor for normal cases.
-            Specifically, both the high-level module and the adaptive corrector are implemented as causal transformers that generate predictions based on the historical scanning sequence.
-            To ensure generalizability, we collected the first large-scale ICA scanning dataset comprising 164 trajectories and 72K samples from 28 subjects of both genders.
-            Based on the above innovations, our approach achieves a 95% success rate in locating the ICA on unseen individuals, outperforming baselines and demonstrating its effectiveness.
-            Our code will be released after acceptance.
+            Accurate scene perception is critical for vision-based robotic manipulation. 
+            Existing approaches typically follow either a Vision-to-Action (V-A) paradigm, predicting actions directly from visual inputs, 
+            or a Vision-to-3D-to-Action (V-3D-A) paradigm, leveraging intermediate 3D representations. 
+            However, these methods often struggle with action inaccuracies due to the complexity and dynamic nature of manipulation scenes. 
+            In this paper, we adopt a V-4D-A framework that enables direct action reasoning from motion-aware 4D representations via a Gaussian Action Field (GAF). 
+            GAF extends 3D Gaussian Splatting (3DGS) by incorporating learnable motion attributes, allowing 4D modeling of dynamic scenes and manipulation actions. 
+            To learn time-varying scene geometry and action-aware robot motion, 
+            GAF provides three interrelated outputs: reconstruction of the current scene, prediction of future frames, and estimation of init action via Gaussian motion. 
+            Furthermore, we employ an action-vision-aligned denoising framework, conditioned on a unified representation that combines the init action and the Gaussian perception, 
+            both generated by the GAF, to further obtain more precise actions. Extensive experiments demonstrate significant improvements, with GAF achieving +11.5385 dB PSNR, 
+            +0.3864 SSIM and -0.5574 LPIPS improvements in reconstruction quality, while boosting the average +7.3% success rate in robotic manipulation tasks over state-of-the-art methods.
           </p>
         </div>
       </div>
@@ -192,26 +192,26 @@
               <span>Copy</span>
             </button>
           </div>
-          <pre id="bibtexCode" style="background-color: #f5f5f5; padding: 1rem; border-radius: 4px; overflow-x: auto; position: relative;"><code>@misc{wang2025ultrahithierarchicaltransformerarchitecture,
-      title={UltraHiT: A Hierarchical Transformer Architecture for Generalizable Internal Carotid Artery Robotic Ultrasonography}, 
-      author={Teng Wang and Haojun Jiang and Yuxuan Wang and Zhenguo Sun and Xiangjie Yan and Xiang Li and Gao Huang},
+          <pre id="bibtexCode" style="background-color: #f5f5f5; padding: 1rem; border-radius: 4px; overflow-x: auto; position: relative;"><code>@misc{chai2025gafgaussianactionfield,
+      title={GAF: Gaussian Action Field as a 4D Representation for Dynamic World Modeling in Robotic Manipulation}, 
+      author={Ying Chai and Litao Deng and Ruizhi Shao and Jiajun Zhang and Kangchen Lv and Liangjun Xing and Xiang Li and Hongwen Zhang and Yebin Liu},
       year={2025},
-      eprint={2509.13832},
+      eprint={2506.14135},
       archivePrefix={arXiv},
       primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2509.13832}, 
+      url={https://arxiv.org/abs/2506.14135}, 
 }</code></pre>
         </div>
         <script>
           document.getElementById('copyBibtexBtn').addEventListener('click', function() {
-            const bibtexText = `@misc{wang2025ultrahithierarchicaltransformerarchitecture,
-      title={UltraHiT: A Hierarchical Transformer Architecture for Generalizable Internal Carotid Artery Robotic Ultrasonography}, 
-      author={Teng Wang and Haojun Jiang and Yuxuan Wang and Zhenguo Sun and Xiangjie Yan and Xiang Li and Gao Huang},
+            const bibtexText = `@misc{chai2025gafgaussianactionfield,
+      title={GAF: Gaussian Action Field as a 4D Representation for Dynamic World Modeling in Robotic Manipulation}, 
+      author={Ying Chai and Litao Deng and Ruizhi Shao and Jiajun Zhang and Kangchen Lv and Liangjun Xing and Xiang Li and Hongwen Zhang and Yebin Liu},
       year={2025},
-      eprint={2509.13832},
+      eprint={2506.14135},
       archivePrefix={arXiv},
       primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2509.13832}, 
+      url={https://arxiv.org/abs/2506.14135}, 
 }`;
             navigator.clipboard.writeText(bibtexText).then(function() {
               const btn = document.getElementById('copyBibtexBtn');
