@@ -16,7 +16,7 @@
 
 ## 🎥 Demo Video
 
-See the [project website](https://chaiying1.github.io/GAF.github.io/project_page/) for the full demo video.
+See the [project website](https://chaiying1.github.io/projects/GAF/) for the full demo video.
 
 ## 🏗️ Architecture
 
