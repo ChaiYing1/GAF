@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="GAF: Gaussian Action Field as a 4D Representation for Dynamic World Modeling in Robotic Manipulation (ICRA 2026)">
+  <meta name="keywords" content="ICRA 2026, world model, manipulation, Gaussian, GAF, 4D">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GAF (ICRA 2026)</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-3 publication-title" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+            GAF: Gaussian Action Field as a 4D Representation for Dynamic World Modeling in Robotic Manipulation
+          </h1>
+          <div class="is-size-4"><b style="color: #e74c3c;">Accepted to ICRA 2026</b></div>
+
+          <div class="is-size-5 publication-authors" style="font-weight: bold;">
+            <span class="author-block">Ying Chai*</a><sup>1</sup>,</span>
+            <span class="author-block">Litao Deng</a><sup>2,3</sup>,</span>
+            <span class="author-block"><a href="https://dsaurus.github.io/saurus/">Ruizhi Shao</a><sup>1</sup>,</span>
+            <span class="author-block">Jiajun Zhang<sup>1</sup>,</span>
+            <span class="author-block">Kangchen Lv<sup>1</sup>,</span>
+            <span class="author-block">Liangjun Xing<sup>1</sup>,</span>
+            <span class="author-block"><a href="https://sites.google.com/view/homepageoflixiang">Xiang Li</a><sup>1,&dagger;</sup></span>
+            <span class="author-block"><a href="https://zhanghongwen.cn/">Hongwen Zhang</a><sup>2,&dagger;</sup></span>
+            <span class="author-block"><a href="https://www.liuyebin.com/">Yebin Liu</a><sup>1,&dagger;</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Tsinghua University</span>
+            <span class="author-block"><sup>2</sup>Beijing Normal University</span>
+            <span class="author-block"><sup>3</sup>Shadow AI.</span>
+          </div>
+
+          <div class="is-size-6 publication-authors" style="font-weight: bold;">
+            <sup>*</sup>Equal contributions.
+          </div>
+          <div class="is-size-6 publication-authors">
+            <sup>&dagger;</sup>Corresponding author.
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2506.14135"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arxiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/ChaiYing1/GAF"
+                   class="external-link button is-normal is-rounded" style="background-color: #6c5ce7; color: white; border: none;">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="Demo">
+  <div class="container is-max-desktop content has-text-centered">
+    <h2 class="title is-3">Demo</h2>
+    <video controls style="width: 100%; height: auto;">
+      <source src="video/demo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Accurate scene perception is critical for vision-based robotic manipulation. 
+            Existing approaches typically follow either a Vision-to-Action (V-A) paradigm, predicting actions directly from visual inputs, 
+            or a Vision-to-3D-to-Action (V-3D-A) paradigm, leveraging intermediate 3D representations. 
+            However, these methods often struggle with action inaccuracies due to the complexity and dynamic nature of manipulation scenes. 
+            In this paper, we adopt a V-4D-A framework that enables direct action reasoning from motion-aware 4D representations via a Gaussian Action Field (GAF). 
+            GAF extends 3D Gaussian Splatting (3DGS) by incorporating learnable motion attributes, allowing 4D modeling of dynamic scenes and manipulation actions. 
+            To learn time-varying scene geometry and action-aware robot motion, 
+            GAF provides three interrelated outputs: reconstruction of the current scene, prediction of future frames, and estimation of init action via Gaussian motion. 
+            Furthermore, we employ an action-vision-aligned denoising framework, conditioned on a unified representation that combines the init action and the Gaussian perception, 
+            both generated by the GAF, to further obtain more precise actions. Extensive experiments demonstrate significant improvements, with GAF achieving +11.5385 dB PSNR, 
+            +0.3864 SSIM and -0.5574 LPIPS improvements in reconstruction quality, while boosting the average +7.3% success rate in robotic manipulation tasks over state-of-the-art methods.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/overview.jpg" alt="UltraHiT Overview" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Background</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/background.jpg" alt="Background" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/method.jpg" alt="Method" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Experiment</h2>
+        <div class="content has-text-justified">
+          <p>
+            GAF rendered image quality is far superior to baseline in either Qualitative images or Quantitative Metrics:  
+          </p>
+          <img src="./static/images/reconstruction.jpg" alt="Experiment 1" style="width: 100%; height: auto; display: block; margin: 0 auto 2rem auto;">
+          <p>
+            Simulation experiments show that our method achieves higher success rates than all baseline approaches, and further exhibits strong spatial generalization and robust multi-task performance.
+          </p>
+          <img src="./static/images/sim.jpg" alt="Experiment 2" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+          <p>
+            GAF can be successfully deployed in real-world environments.
+          </p>
+          <img src="./static/images/realworld.jpg" alt="Experiment 3" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="content">
+        <div style="margin-top: 2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <h3 class="title is-5" style="margin-bottom: 0;">BibTeX</h3>
+            <button id="copyBibtexBtn" class="button is-small" style="background-color: #667eea; color: white; border: none;">
+              <span class="icon">
+                <i class="fas fa-copy"></i>
+              </span>
+              <span>Copy</span>
+            </button>
+          </div>
+          <pre id="bibtexCode" style="background-color: #f5f5f5; padding: 1rem; border-radius: 4px; overflow-x: auto; position: relative;"><code>@misc{chai2025gafgaussianactionfield,
+      title={GAF: Gaussian Action Field as a 4D Representation for Dynamic World Modeling in Robotic Manipulation}, 
+      author={Ying Chai and Litao Deng and Ruizhi Shao and Jiajun Zhang and Kangchen Lv and Liangjun Xing and Xiang Li and Hongwen Zhang and Yebin Liu},
+      year={2025},
+      eprint={2506.14135},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2506.14135}, 
+}</code></pre>
+        </div>
+        <script>
+          document.getElementById('copyBibtexBtn').addEventListener('click', function() {
+            const bibtexText = `@misc{chai2025gafgaussianactionfield,
+      title={GAF: Gaussian Action Field as a 4D Representation for Dynamic World Modeling in Robotic Manipulation}, 
+      author={Ying Chai and Litao Deng and Ruizhi Shao and Jiajun Zhang and Kangchen Lv and Liangjun Xing and Xiang Li and Hongwen Zhang and Yebin Liu},
+      year={2025},
+      eprint={2506.14135},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2506.14135}, 
+}`;
+            navigator.clipboard.writeText(bibtexText).then(function() {
+              const btn = document.getElementById('copyBibtexBtn');
+              const originalHTML = btn.innerHTML;
+              btn.innerHTML = '<span class="icon"><i class="fas fa-check"></i></span><span>Copied!</span>';
+              btn.style.backgroundColor = '#00b894';
+              setTimeout(function() {
+                btn.innerHTML = originalHTML;
+                btn.style.backgroundColor = '#667eea';
+              }, 2000);
+            }).catch(function(err) {
+              console.error('Failed to copy: ', err);
+              alert('Failed to copy BibTeX. Please select and copy manually.');
+            });
+          });
+        </script>
+        <div style="margin-top: 2rem;">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            It borrows the source code of <a
+              href="https://nerfies.github.io/">this website</a>,
+              We sincerely thank <a
+              href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
