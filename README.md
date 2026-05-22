@@ -106,7 +106,7 @@ If you find this work useful in your research, please cite:
 
 ## 🌐 Project Website
 
-Visit our project website: [[https://chaiying1.github.io/GAF.github.io/project_page/](https://ultrahit-thu.github.io/UltraHiT/)]
+Visit our project website: [[https://chaiying1.github.io/GAF.github.io/project_page/](https://chaiying1.github.io/projects/GAF/)]
 
 This website is deployed and maintained by [Ying Chai].
 
