@@ -1,0 +1,6 @@
+# @package _global_
+
+dataset:
+  gaf:
+    view_sampler:
+      index_path: assets/evaluation_index_gaf.json

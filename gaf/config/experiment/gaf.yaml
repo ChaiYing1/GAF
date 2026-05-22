@@ -1,0 +1,42 @@
+# @package _global_
+
+defaults:
+  - /dataset@_group_.gaf: gaf
+  - override /model/encoder: noposplat
+  - override /model/encoder/backbone: croco
+  - override /loss: [mse, lpips]
+
+wandb:
+  name: gaf
+  tags: [gaf, 256x256]
+
+model:
+  encoder:
+    gs_params_head_type: dpt_gs
+    pose_free: true
+    intrinsics_embed_loc: encoder
+    intrinsics_embed_type: token
+    pretrained_weights: './pretrained_weights/MASt3R_ViTLarge_BaseDecoder_512_catmlpdpt_metric.pth'
+  decoder:
+    make_scale_invariant: true
+
+dataset:
+  gaf:
+    view_sampler:
+      warm_up_steps: 10000
+
+optimizer:
+  lr: 2e-5
+  warm_up_steps: 125
+  backbone_lr_multiplier: 0.1
+
+data_loader:
+  train:
+    batch_size: 8
+
+trainer:
+  max_steps: 50000
+  val_check_interval: 1000
+
+checkpointing:
+  every_n_train_steps: 10000

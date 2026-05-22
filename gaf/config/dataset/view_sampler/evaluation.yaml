@@ -1,0 +1,4 @@
+name: evaluation
+
+index_path: assets/evaluation_index_gaf.json
+num_context_views: 2
