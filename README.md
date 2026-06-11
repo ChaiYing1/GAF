@@ -16,7 +16,7 @@
 
 ## 🎥 Demo Video
 
-See the [project website](https://chaiying1.github.io/GAF.github.io/project_page/) for the full demo video.
+See the [project website](https://chaiying1.github.io/projects/GAF/) for the full demo video.
 
 ## 🏗️ Architecture
 
@@ -106,7 +106,7 @@ If you find this work useful in your research, please cite:
 
 ## 🌐 Project Website
 
-Visit our project website: [[https://chaiying1.github.io/GAF.github.io/project_page/](https://ultrahit-thu.github.io/UltraHiT/)]
+Visit our project website: [[https://chaiying1.github.io/GAF.github.io/project_page/](https://chaiying1.github.io/projects/GAF/)]
 
 This website is deployed and maintained by [Ying Chai].
 
@@ -126,3 +126,4 @@ For questions or inquiries, please contact:
 ---
 
 **Note**: This work was supported by the National Natural Science Foundation of China (NSFC) No.62125107.
+
