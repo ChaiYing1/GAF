@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="">
-    <img src="https://github.com/ChaiYing1/ChaiYing1.github.io/tree/main/projects/GAF/static/images/overview.jpg" alt="Teaser" width="100%">
+    <img src="https://github.com/ChaiYing1/ChaiYing1.github.io/blob/main/projects/GAF/static/images/overview.jpg" alt="Teaser" width="100%">
   </a>
 </p>
 
